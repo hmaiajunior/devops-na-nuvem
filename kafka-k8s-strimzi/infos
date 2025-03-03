@@ -1,0 +1,10 @@
+Fila x event streaming
+
+Fila --> processamento assíncrono, processamento longo. Um exemplo aqui seria uma fila SQS para um novo pedido que chega em média a cada 10 segunos, por exemplo. 
+
+Event streaming --> Real Time, Ongoin replication. 
+
+
+OBS:. Há uma artigo do Kenery que ele faz uma prática de migração de uma tabela entre bancos de dados:
+
+https://kenerry.dev/blog/kafka-es-platform.html
