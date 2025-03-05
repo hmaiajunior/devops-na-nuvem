@@ -3,6 +3,20 @@ variable "region" {
   default = "us-east-1"
 }
 
+variable "tags" {
+  type = object({
+    Project    = string  
+    Enviroment = string 
+
+  })  
+  default = {
+    Project    =  "nsse", 
+    Enviroment =  "production"
+
+  }
+
+}
+
 variable "assume_role" {
   type = object({
     role_arn    = string
