@@ -5,13 +5,13 @@ variable "region" {
 
 variable "tags" {
   type = object({
-    Project    = string  
-    Enviroment = string 
+    Project    = string
+    Enviroment = string
 
-  })  
+  })
   default = {
-    Project    =  "nsse", 
-    Enviroment =  "production"
+    Project    = "nsse",
+    Enviroment = "production"
 
   }
 
@@ -26,7 +26,7 @@ variable "assume_role" {
 
   default = {
     role_arn    = "arn:aws:iam::513794908995:role/terraform-role"
-    external_id = "b5b2884c-fe2f-4b26-83e4-626d110c46e0"
+    external_id = "97b9dcb3-26e7-4798-830d-79f3dd893374"
 
   }
 }
