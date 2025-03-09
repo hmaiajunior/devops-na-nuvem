@@ -33,9 +33,9 @@ variable "assume_role" {
 
 variable "public_subnets" {
   type = list(object({
-    name = string
-    cidr_block              = string
-    availability_zone       = string
+    name                     = string
+    cidr_block               = string
+    availability_zone        = string
     map_public_ip_on_launch  = bool
 
   }))
@@ -53,6 +53,32 @@ default = [
     cidr_block               = "10.0.0.64/27"
     availability_zone        = "us-east-1b"
     map_public_ip_on_launch  = true
+   }
+  ]
+}
+
+variable "private_subnets" {
+  type = list(object({
+    name                     = string
+    cidr_block               = string
+    availability_zone        = string
+    map_public_ip_on_launch  = bool
+
+  }))
+
+default = [
+   {
+    name                     = "nsse-production-vpc-private-subnet-1a"
+    cidr_block               = "10.0.0.32/27"
+    availability_zone        = "us-east-1a"
+    map_public_ip_on_launch  = false
+
+   },
+   {
+    name                     = "nsse-production-vpc-private-subnet-1b"
+    cidr_block               = "10.0.0.96/27"
+    availability_zone        = "us-east-1b"
+    map_public_ip_on_launch  = false
    }
   ]
 }
