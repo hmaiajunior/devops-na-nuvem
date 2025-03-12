@@ -13,3 +13,7 @@ Links:
 Antes de executar o terraform apply é interessante, pelo menos no início do trabalho, validar se você está realmente apontando para a sua conta correta na AWS executando o comando abaixo:
 
 aws sts get-caller-identity
+
+Interessante seguir as melhores práticas do Terraform que podem ser encontradas nesse site:
+
+terraform-best-pratices.com/naming
