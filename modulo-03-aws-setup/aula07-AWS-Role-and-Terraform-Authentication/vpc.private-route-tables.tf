@@ -8,6 +8,7 @@ resource "aws_route_table" "private_1a" {
 
 
     tags = merge({ Name = "nsse-production-vpc-private-route-table-1a" }, var.tags)
+    depends_on = [aws_vpc.this]
   
 }
 
@@ -16,6 +17,7 @@ resource "aws_route_table_association" "private_associations_1a" {
 
   subnet_id      = [for subnet in aws_subnet.privates: subnet.id if subnet.availability_zone == "us-east-1a"][0]
   route_table_id = aws_route_table.private_1a.id
+  depends_on     = [aws_route_table.private_1a]
 }
 
 resource "aws_route_table" "private_1b" {
@@ -27,13 +29,15 @@ resource "aws_route_table" "private_1b" {
   }
 
 
-    tags = merge({ Name = "nsse-production-vpc-private-route-table-1b" }, var.tags)
+    tags        = merge({ Name = "nsse-production-vpc-private-route-table-1b" }, var.tags)
+    depends_on  = [aws_vpc.this]
   
 }
 
 resource "aws_route_table_association" "private_association_1b" {
   count          = length([for subnet in aws_subnet.privates: subnet.id if subnet.availability_zone == "us-east-1b"])
-  
+
   subnet_id      = [for subnet in aws_subnet.privates: subnet.id if subnet.availability_zone == "us-east-1b"][0]
   route_table_id = aws_route_table.private_1b.id
+  depends_on     = [aws_route_table.private_1b]
 }
