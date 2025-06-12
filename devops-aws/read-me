@@ -1,0 +1,3 @@
+Utilize o comando abaixo para consultar informações sobre as credenciais configuradas para acesso a AWS através do CLI:
+
+aws sts get-caller-identity
