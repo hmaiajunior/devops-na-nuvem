@@ -1,3 +1,9 @@
 Utilize o comando abaixo para consultar informações sobre as credenciais configuradas para acesso a AWS através do CLI:
 
 aws sts get-caller-identity
+
+Após a criação do EKS executar o comando abaixo para atualizar o kubeconfig adicionando o cluster recém criado:
+
+aws eks update-kubeconfig --region us-east-1 --name devops-na-nuvem-week-eks-cluster
+
+Para conseguir realizar o acesso ao cluster precisei fazer a atualização do kubectl, aws cli e do aws-iam-authenticator.
