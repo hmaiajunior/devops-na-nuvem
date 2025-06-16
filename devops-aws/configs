@@ -1,0 +1,33 @@
+Aula 02:
+
+==> Build da imagem:
+
+docker build -f backend/YoutubeLiveApp/Dockerfile -t 353203138858.dkr.ecr.us-east-1.amazonaws.com/devops-na-nuvem-week/production/backend:v1.0 backend/YoutubeLiveApp
+
+
+docker build -f frontend/YoutubeLiveApp/Dockerfile -t 353203138858.dkr.ecr.us-east-1.amazonaws.com/devops-na-nuvem-week/production/frontend:v1.0 frontend/YoutubeLiveApp
+
+
+==> Login no repo:
+
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 353203138858.dkr.ecr.us-east-1.amazonaws.com
+
+
+==> Push da imagem no repo:
+
+docker push 353203138858.dkr.ecr.us-east-1.amazonaws.com/devops-na-nuvem-week/production/backend:v1.0
+
+docker push 353203138858.dkr.ecr.us-east-1.amazonaws.com/devops-na-nuvem-week/production/frontend:v1.0
+
+==> Gerando yml (declarativo) a partir do imperativo (linha de comando)
+
+kubectl create deploy frontend --image 353203138858.dkr.ecr.us-east-1.amazonaws.com/devops-na-nuvem-week/production/frontend:v1.0 --replicas 1 --dry-run=client -o yaml
+
+==> Comando para estressar o pod e validar o hpa:
+
+kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://backend/backend/weatherforecast; done"
+
+No meu caso não funcionou apontando para o nome. Sendo assim, apontei direto para o IP e funcionou:
+
+kubectl run -i --tty load-generator3 --rm --image=busybox:1.28 -
+-restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://10.0.0.147/backend/weatherforecast; done"
