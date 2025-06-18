@@ -63,6 +63,17 @@ Criando os repositórios, fazendo build das imagens e subindo para os repos cria
         * Teste de carga para validar a configuração de HPA. Validar tb o downscaler.
 
 
+Aula 03:
+
+Antes de iniciar realizar a instalação do Ansible, do eksctl e do helm.
+
+Trabalhando com OIDC. Autenticar e liberar permissões baseadas em roles para as aplicações (entidades externas) que rodam no EKS (para o nosso caso de estudo).
+    - Pegar OIDC URL no EKS
+    - Criar identity provider no IAM
+
+
+
+
 Ideias:
 
     * Configurar HPA nos pods que estão com constantes alertas de memória / CPU

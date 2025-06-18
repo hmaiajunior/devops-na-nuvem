@@ -31,3 +31,12 @@ No meu caso não funcionou apontando para o nome. Sendo assim, apontei direto pa
 
 kubectl run -i --tty load-generator3 --rm --image=busybox:1.28 -
 -restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://10.0.0.147/backend/weatherforecast; done"
+
+
+Aula 03:
+
+Antes de iniciar realizar a instalação do Ansible, do eksctl e do helm.
+
+Trabalhando com 
+
+
