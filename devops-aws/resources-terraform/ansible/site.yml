@@ -59,3 +59,7 @@
     - name: Install AWS Load Balancer Controller (Ouput)
       debug:
         var: load_balancer_controller_installation_result
+    
+    - name: Install Argo CD
+      shell: |
+        kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml

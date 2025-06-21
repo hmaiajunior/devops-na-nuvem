@@ -37,6 +37,11 @@ Aula 03:
 
 Antes de iniciar realizar a instalação do Ansible, do eksctl e do helm.
 
-Trabalhando com 
+Realizada a instalação do ALB, do ingress e o registro do domínio. Tudo através do Ansible o do Terraform.
+
+
+Aula 04:
+
+Instalar o Argo CD no cluster kubernets, configurar o OIDC para o pod do Argo, configurar a pipeline.
 
 
