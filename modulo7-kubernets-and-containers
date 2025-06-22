@@ -1,0 +1,12 @@
+Existem situação em que se tem mais de um container dentro de um mesmo pod, esse container adicional é chamado de side car. Um exemplo de uso do cantainer side car é o consumo de métricas para exportá-las para o prometheus, por exemplo.
+
+A boa prática é sempre criar a sua aplicação a partir de um deployment, pois ele gerencia toda a infra da sua aplicação garantindo, por exemplo, que a sua aplicação rode sempre com a quantidade de pods solicitadas.
+
+Para saber qual pod o deploy deve gerenciar é necessário ouso de labels. Dentro da estrutura do deployment tem-se a definição do próprio deployment, do pod e do(s) container(s).
+
+Informações referente a configuração devem ser colocadas ou dentro de um config map(variáveis que podem ser visíveis) ou dentro do secret (informações sensíveis).
+
+
+Aula 04:
+
+Ao trabalhar com um repositório privado no ECR é preciso configurar um image pull secret para que as instâncias do EKS consigam fazer o pull da imagem com sucesso.
