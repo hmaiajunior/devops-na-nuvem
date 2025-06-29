@@ -15,7 +15,7 @@ Aula 08: Readiness e Liveness --> Probes
 
 Readiness: Garante que o container receberá requisições de fato quando estiver pronto para tal.   
 
-Liveness: Um determinado endpoint pode ser apontado para que o container possa ficar fazendo um helth check. Em caso de falha do helth o container pode ser reiniciado.
+Liveness: Um determinado endpoint pode ser apontado para que o container possa ficar fazendo um helth check. Em caso de falha do health o container pode ser reiniciado.
 
 Aula 09: Service Account
 
@@ -25,4 +25,16 @@ Uma service account é uma identidade que é atribuída a um POD.
 Service account   <----->   RBAC (permissionamento)
 
 Ao configurar uma conta de serviço na spec do seu deployment, um diretório com um token é criado dentro do container. Ao fazer o describe do pod é possível ver o nome da service account e a localização do diretório que foi criado com o token. A essa SA é possível atribuir RBACs.
+
+Aula 10: Security Context
+
+Aula 11: Deployment / Mongo Secret
+
+Aula 12: Deploy demais microservicos
+
+Aula 13: Deployment Topology Spread Constraints - Topologia de restrição de propagação
+
+Aula 14: Node Port Services e Topology Aware Routing
+
+Aula 15: ACM Certificate
 
