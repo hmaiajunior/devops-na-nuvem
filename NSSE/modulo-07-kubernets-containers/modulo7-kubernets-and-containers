@@ -38,3 +38,9 @@ Aula 14: Node Port Services e Topology Aware Routing
 
 Aula 15: ACM Certificate
 
+    - Fiz a criação do certificado para o nosso domínio e a validação via teraform.
+
+Aula 16: Ingress
+
+    - Realizada a criação do ingress. Quando criado ele provisiona um ELB onde lá existirá o apontamento para cada um dos paths existentes na aplicação. No nosso caso aqui: notificator - identity - invoice - order
+
