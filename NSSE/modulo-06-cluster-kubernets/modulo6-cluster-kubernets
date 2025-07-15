@@ -29,3 +29,6 @@ Aula 05 - Ansible em instâncias Internas (SSM)
 
 Olhar pré-requisitos na documentação.
 
+Aula 06 - Inventário estático x dinâmico
+
+Inventário são os nodes que serão gerenciados pelo Ansible. No modo estático passamos todo o inventário de maneira fixada em um aquivo e no modo dinâmico o próprio Ansible faz o discovery pra gente.
