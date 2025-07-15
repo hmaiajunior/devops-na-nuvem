@@ -1,0 +1,9 @@
+Aula 01 - Design Instâncias EC2
+
+É uma boa prática sempre criar Instâncias a partir de um Auto Scaling Group (ASG) que terá um lauch template atrelado a ele. O ASG irá gerenciar o pool de instâncias. Em um cenário de indisponibidade de uma determinada instância o ASG irá se encarregar de provisionar uma nova instância para que o pool continue dentro de um estado desejado.
+
+Aula 02 - Tipos de instâncias.
+
+São vários os tipos de instâncias disponíveis na AWS. Existe um processo chamado de Right Sizing para escolher a melhor instância custo/benefício para a sua aplicação.
+
+Instâncias do tipo T2 Burstable, que enquanto vc estiver trabalhando abaixo do nível de CPU alocado para aquela instância, créditos são gerados e em momentos de eventuais picos vc poderá utilizar aqueles créditos utilizando CPU além do que a sua instância permite.
