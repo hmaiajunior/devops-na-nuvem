@@ -7,3 +7,11 @@ Aula 02 - Tipos de instâncias.
 São vários os tipos de instâncias disponíveis na AWS. Existe um processo chamado de Right Sizing para escolher a melhor instância custo/benefício para a sua aplicação.
 
 Instâncias do tipo T2 Burstable, que enquanto vc estiver trabalhando abaixo do nível de CPU alocado para aquela instância, créditos são gerados e em momentos de eventuais picos vc poderá utilizar aqueles créditos utilizando CPU além do que a sua instância permite.
+
+Aula 03 - Amazon Machine Image (AMIs)
+
+Para ambientes produtivos, a imagem recomendada pelo Kennison é o Debian por conta da estabilidade do Sistema Operacional.
+
+Aula 04 - Auto Scaling Groups
+
+Ainda que a ideia seja o provisionamento de uma única instância, recomenda-se que seja feito através do ASG.
