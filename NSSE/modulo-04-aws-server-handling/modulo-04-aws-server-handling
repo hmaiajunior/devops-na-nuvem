@@ -14,4 +14,18 @@ Para ambientes produtivos, a imagem recomendada pelo Kennison é o Debian por co
 
 Aula 04 - Auto Scaling Groups
 
-Ainda que a ideia seja o provisionamento de uma única instância, recomenda-se que seja feito através do ASG.
+Ainda que a ideia seja o provisionamento de uma única instância, recomenda-se que seja feito através do ASG para que exista o controle do estado daquela instância.
+
+Aula 05 - Key Pair
+
+Realizada a criação da key pair via IAC. Utilizado o módulo TLS (ver documentação do provider TLS) para a criação de uma nova chave pública, pois na documentação que a AWS fornece ela parte do princípio que você já possui a chave pública.
+
+Como a chave privada foi marcada como sensível no terraform, é necessário executar o comando abaixo para ter acesso a ela:
+
+terraform output -raw key_pair_private_key
+
+Aula 06 - Instance Profile
+
+Ao se trabalhar com serviços dentro de instâncias EC2, não é uma boa prática o uso de credenciais para conceder acesso daquela instância para um determinado serviço. Nesse caso é utilizado o que chamamos de instance profile. 
+
+O instance profile estará atrelado a uma instância e terá uma role atrelado a esse profile.

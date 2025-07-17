@@ -33,10 +33,15 @@ variable "assume_role" {
 
 variable "ec2_resources" {
   type = object({
-    key_pair_name = string 
+    key_pair_name = string
+    instance_role = string
+    instance_profile = string
   })
 
     default = {
         key_pair_name = "nsse-produciton-key-pair"
+        instance_role = "nsse-production-instance-role"
+        instance_profile = "nsse-production-instance-profile"
     }
 }
+
