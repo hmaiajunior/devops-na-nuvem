@@ -36,12 +36,25 @@ variable "ec2_resources" {
     key_pair_name = string
     instance_role = string
     instance_profile = string
+    ssh_security_group = string
+    ssh_source_ip = string
   })
 
     default = {
         key_pair_name = "nsse-produciton-key-pair"
         instance_role = "nsse-production-instance-role"
         instance_profile = "nsse-production-instance-profile"
-    }
+        ssh_security_group = "allow-ssh"
+        ssh_source_ip = "177.37.155.67/32"    
+        }
 }
 
+variable "vpc_resources" {
+  type = object({
+    vpc = string
+  })
+
+  default = {
+    vpc = "nsse-production-vpc"
+  }
+}

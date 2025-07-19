@@ -1,0 +1,6 @@
+backend/.terraform
+backend/.terraform.lock.hcl/
+networking/.terraform
+networking/.terraform.lock.hcl/
+server/.terraform
+server/.terraform.lock.hcl/
