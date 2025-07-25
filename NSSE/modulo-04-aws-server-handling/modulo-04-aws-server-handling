@@ -29,3 +29,7 @@ Aula 06 - Instance Profile
 Ao se trabalhar com serviços dentro de instâncias EC2, não é uma boa prática o uso de credenciais para conceder acesso daquela instância para um determinado serviço. Nesse caso é utilizado o que chamamos de instance profile. 
 
 O instance profile estará atrelado a uma instância e terá uma role atrelado a esse profile.
+
+Aula 11 - Terraform Module
+
+Módulo é um container para múltiplos recursos que são utilizados juntos.
