@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"ec2_control_plane_instances","Source":"./modules/ec2","Dir":""},{"Key":"ec2_workers_instances","Source":"./modules/ec2","Dir":""}]}

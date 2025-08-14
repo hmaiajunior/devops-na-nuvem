@@ -25,7 +25,7 @@ variable "assume_role" {
   })
 
   default = {
-    role_arn    = "arn:aws:iam::513794908995:role/terraform-role"
+    role_arn    = "arn:aws:iam::353203138858:role/devopsnanuvem-week"
     external_id = "97b9dcb3-26e7-4798-830d-79f3dd893374"
 
   }
